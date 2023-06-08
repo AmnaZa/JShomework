@@ -88,3 +88,31 @@ console.log(`Timmy's weight: ${timmy.weight}`);
 console.log(`Timmy's mood: ${timmy.mood}`);
 
 console.log(`Gus's owner: ${gus.owner}`);
+
+class Dinner {
+    constructor(appetizer, entree, dessert) {
+      this.appetizer = appetizer;
+      this.entree = entree;
+      this.dessert = dessert;
+    }
+  }
+  
+  class Chef {
+    constructor() {
+      this.dinners = [];
+    }
+  
+    makeDinner(appetizer, entree, dessert) {
+      const dinner = new Dinner(appetizer, entree, dessert);
+      this.dinners.push(dinner);
+    }
+  }
+  
+  // Example usage:
+  let chef = new Chef();
+  chef.makeDinner("Salad", "Chicken", "Cake");
+  chef.makeDinner("Soup", "Steak", "Ice Cream");
+  chef.makeDinner("Nachos", "Tacos", "Churros");
+  
+  console.log(chef.dinners);
+  
